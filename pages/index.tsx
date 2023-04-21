@@ -19,6 +19,11 @@ import CollectionsTimeDropdown, {
 import { Head } from 'components/Head'
 import { CollectionRankingsTable } from 'components/rankings/CollectionRankingsTable'
 import { ChainContext } from 'context/ChainContextProvider'
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import NextJsImage from "../components/primitives/lightbox";
+
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -30,6 +35,8 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
     useState<CollectionsSortingOption>('1DayVolume')
   const marketplaceChain = useMarketplaceChain()
   const { isDisconnected } = useAccount()
+  const [open, setOpen] = useState(true);
+
 
   let collectionQuery: Parameters<typeof useCollections>['0'] = {
     limit: 10,
@@ -85,19 +92,25 @@ const IndexPage: NextPage<Props> = ({ ssr }) => {
             align="center"
             css={{ mx: 'auto', maxWidth: 728, pt: '$5', textAlign: 'center' }}
           >
-            <Text style="h3" css={{ mb: 24 }}>
-              Open Source Marketplace
-            </Text>
-            <Text style="body1" css={{ mb: 48 }}>
-              Reservoir Marketplace is an open-source project that showcases the
-              latest and greatest features of the Reservoir Platform.
-            </Text>
-            <a
-              href="https://github.com/reservoirprotocol/marketplace-v2"
-              target="_blank"
-            >
-              <Button color="gray3">View Source Code</Button>
-            </a>
+            {/* <Lightbox
+  open={open}
+  close={() => setOpen(false)}
+  slides={
+    [{
+      "src":collections[0].image || '0'
+    },{
+      "src":collections[1].image || '0'
+    },{
+      "src":collections[2].image || '0'
+    },{
+      "src":collections[3].image || '0'
+    },{
+      "src":collections[4].image || '0'
+    }]
+  }
+  render={{ slide: NextJsImage }}
+/> */}
+
           </Flex>
         )}
         <Flex css={{ my: '$6', gap: 65 }} direction="column">

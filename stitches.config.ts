@@ -19,6 +19,7 @@ import { createStitches } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
 import { reset } from 'utils/css/reset'
 import { Inter } from '@next/font/google'
+import { redA } from '@radix-ui/colors/types/dark/redA'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -47,32 +48,32 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
         //Aliases
 
         //Primary
-        primary1: '$violet1',
-        primary2: '$violet2',
-        primary3: '$violet3',
-        primary4: '$violet4',
-        primary5: '$violet5',
-        primary6: '$violet6',
-        primary7: '$violet7',
-        primary8: '$violet8',
-        primary9: '$violet9',
-        primary10: '$violet10',
-        primary11: '$violet11',
-        primary12: '$violet12',
+        primary1: '$red1',
+        primary2: '$red2',
+        primary3: '$red3',
+        primary4: '$red4',
+        primary5: '$red5',
+        primary6: '$red6',
+        primary7: '$red7',
+        primary8: '$red8',
+        primary9: '$red9',
+        primary10: '$red10',
+        primary11: '$red11',
+        primary12: '$red12',
 
         //Secondary
-        secondary1: '$violetA1',
-        secondary2: '$violetA2',
-        secondary3: '$violetA3',
-        secondary4: '$violetA4',
-        secondary5: '$violetA5',
-        secondary6: '$violetA6',
-        secondary7: '$violetA7',
-        secondary8: '$violetA8',
-        secondary9: '$violetA9',
-        secondary10: '$violetA10',
-        secondary11: '$violetA11',
-        secondary12: '$violetA12',
+        secondary1: '$redA1',
+        secondary2: '$redA2',
+        secondary3: '$redA3',
+        secondary4: '$redA4',
+        secondary5: '$redA5',
+        secondary6: '$redA6',
+        secondary7: '$redA7',
+        secondary8: '$redA8',
+        secondary9: '$redA9',
+        secondary10: '$redA10',
+        secondary11: '$redA11',
+        secondary12: '$redA12',
 
         //Gray
         gray1: '$slate1',
@@ -117,10 +118,11 @@ export const { createTheme, keyframes, styled, globalCss, getCssText } =
         5: '32px',
         6: '64px',
       },
-      fontSizes: {},
+      fontSizes: {
+      },
       fontWeights: {},
       fonts: {
-        body: inter.style.fontFamily,
+        body: 'cursive',
         button: '$body',
       },
       lineHeights: {},
@@ -247,32 +249,32 @@ export const darkTheme = createTheme({
     //Aliases
 
     //Primary
-    primary1: '$violet1',
-    primary2: '$violet2',
-    primary3: '$violet3',
-    primary4: '$violet4',
-    primary5: '$violet5',
-    primary6: '$violet6',
-    primary7: '$violet7',
-    primary8: '$violet8',
-    primary9: '$violet9',
-    primary10: '$violet10',
-    primary11: '$violet11',
-    primary12: '$violet12',
+    primary1: '$red1',
+    primary2: '$red2',
+    primary3: '$red3',
+    primary4: '$red4',
+    primary5: '$red5',
+    primary6: '$red6',
+    primary7: '$red7',
+    primary8: '$red8',
+    primary9: '$red9',
+    primary10: '$red10',
+    primary11: '$red11',
+    primary12: '$red12',
 
     //Secondary
-    secondary1: '$violetA1',
-    secondary2: '$violetA2',
-    secondary3: '$violetA3',
-    secondary4: '$violetA4',
-    secondary5: '$violetA5',
-    secondary6: '$violetA6',
-    secondary7: '$violetA7',
-    secondary8: '$violetA8',
-    secondary9: '$violetA9',
-    secondary10: '$violetA10',
-    secondary11: '$violetA11',
-    secondary12: '$violetA12',
+    secondary1: '$redA1',
+    secondary2: '$redA2',
+    secondary3: '$redA3',
+    secondary4: '$redA4',
+    secondary5: '$redA5',
+    secondary6: '$redA6',
+    secondary7: '$redA7',
+    secondary8: '$redA8',
+    secondary9: '$redA9',
+    secondary10: '$redA10',
+    secondary11: '$redA11',
+    secondary12: '$redA12',
 
     //Gray
     gray1: '$slate1',
@@ -297,5 +299,9 @@ export const darkTheme = createTheme({
     panelBorder: '$slate7',
     panelShadow: 'transparent',
     dropdownBg: '$gray3',
+  },
+  fonts: {
+    body: 'monospace',
+    button: '$body',
   },
 })
